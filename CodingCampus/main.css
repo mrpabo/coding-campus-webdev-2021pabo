@@ -1,0 +1,52 @@
+.Farbenpalette {
+  color: rgb(53, 41, 77);
+  text-align: center;
+  margin: auto;
+  width: auto;
+}
+
+.text {
+  display: inline-block;
+  width: 200px;
+  text-align: center;
+}
+
+.box1 {
+  display: inline-block;
+  width: 200px;
+  background-color: rgb(93, 17, 216);
+  margin: 20px auto;
+  height: 250px;
+}
+
+.box2 {
+  display: inline-block;
+  width: 200px;
+  background-color: rgb(192, 134, 48);
+  margin: 20px auto;
+  height: 250px;
+}
+
+.box3 {
+  display: inline-block;
+  width: 200px;
+  background-color: rgb(24, 216, 24);
+  margin: 20px auto;
+  height: 250px;
+}
+
+.box4 {
+  display: inline-block;
+  width: 200px;
+  background-color: rgb(39, 189, 107);
+  margin: 20px auto;
+  height: 250px;
+}
+
+.box5 {
+  display: inline-block;
+  width: 200px;
+  background-color: rgb(83, 135, 233);
+  margin: 20px auto;
+  height: 250px;
+}

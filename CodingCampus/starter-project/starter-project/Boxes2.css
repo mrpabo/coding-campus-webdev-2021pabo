@@ -1,0 +1,14 @@
+.parent {
+  border: solid;
+  width: 1000px;
+  height: 1000px;
+}
+.child {
+  text-align: center;
+  width: 200px;
+  height: 80px;
+  border: 2px solid black;
+  border-radius: 1em 1em 1em 1em;
+  margin: 100px auto;
+  padding: 2em;
+}
