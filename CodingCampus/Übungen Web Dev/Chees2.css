@@ -1,0 +1,29 @@
+.text {
+  text-align: center;
+  font-size: 100px;
+}
+
+.box1 {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  background-color: grey;
+  margin: -4px;
+  padding: 1%;
+}
+
+.box2 {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  background-color: rgb(3, 2, 2);
+  margin: -4px;
+  padding: 1%;
+}
+.Rahmen {
+  width: 950px;
+  background-color: rgb(204, 204, 142);
+  border: medium solid rgb(20, 12, 12);
+  margin: 4px auto;
+  padding: 4% 2% 4% 4%;
+}

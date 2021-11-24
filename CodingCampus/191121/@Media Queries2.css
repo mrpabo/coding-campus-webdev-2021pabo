@@ -1,0 +1,39 @@
+.parent {
+  display: flex;
+  width: 500px;
+  height: 500px;
+  border: 2px black solid;
+}
+.red {
+  display: none;
+  background-color: red;
+  width: 50px;
+  height: 50px;
+}
+
+.blue {
+  display: none; 
+  background-color: blue;
+  width: 50px;
+  height: 50px;
+}
+
+.green {
+  display: none;
+  background-color: green;
+  width: 50px;
+  height: 50px;
+}
+
+.pink {
+  display: none;
+  background-color: pink;
+  width: 50px;
+  height: 50px;
+}
+
+@media only screen and (max-width: 699px) {
+  .pink{
+    display: flex;
+  }
+}
