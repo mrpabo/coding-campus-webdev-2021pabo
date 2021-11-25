@@ -1,0 +1,21 @@
+.body {
+  margin: 0%;
+  font-family: "open sans", sans-serif;
+  color: rgb(55, 55, 55);
+}
+.h2 {
+  margin-top: 0%;
+}
+
+.abtn {
+  background-color: rgb(55, 55, 55);
+  color: white;
+  text-decoration: none;
+  padding: 8px 24px;
+  display: inline-block;
+  border-radius: 4px;
+}
+.container {
+  width: 90%;
+  margin: auto;
+}
