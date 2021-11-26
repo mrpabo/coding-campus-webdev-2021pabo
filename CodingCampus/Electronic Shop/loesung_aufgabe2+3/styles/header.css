@@ -1,0 +1,37 @@
+#main-header {
+    height: 80px;
+    background-color: lightgray;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+}
+
+#main-header a {
+    text-decoration: none;
+}
+
+#logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: rgb(55, 55, 55);
+    text-transform: uppercase;
+}
+
+#main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+#main-nav ul li {
+    margin: 0 16px;
+    /* margin-left: 16px;
+    margin-right: 16px; */
+}
+
+#main-nav ul li a {
+    color:rgb(55, 55, 55);
+    font-size: 20px;
+}
