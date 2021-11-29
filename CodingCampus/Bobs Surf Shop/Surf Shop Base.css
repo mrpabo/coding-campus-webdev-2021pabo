@@ -1,0 +1,12 @@
+:root {
+  --bs-blue: #4cc2c0;
+  --bss-light-blue: #8bdada;
+  --bss-white: #fcf5e2;
+  --bss-yellow: #fecb75;
+  --bsss-red: #fd5c5a;
+}
+
+@font-face {
+  font-family: Pacifico-Regular;
+  src: url(".puplic/fonts/Pacifico-Regular.ttf");
+}
