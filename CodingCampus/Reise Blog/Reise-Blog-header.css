@@ -7,18 +7,16 @@
   text-shadow: 1px 1px 2px black;
 }
 
-header {
+header { color: rgb(230, 230, 49);
+  font-family: "Raleway 700";
   display: flex;
   justify-content: space-between;
 }
-.body {
-  color: rgb(230, 230, 49);
-  font-family: "quicksand", "sans-serif";
-}
+
 
 #hero {
+  background-image: url("/img/Paris.jpg");
   height: 800px;
-  background-image: url("../img/Paris.jpg");
 }
 nav ul {
   display: flex;
