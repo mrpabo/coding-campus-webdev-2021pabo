@@ -1,0 +1,18 @@
+#page-logo a {
+    font-size: 40px;
+    color: rgb(230, 230, 49);
+    text-decoration: none;
+    text-transform: lowercase;
+    padding: 10px;
+    text-shadow: 1px 1px 2px black;
+  }
+  
+  header {
+      display: flex;
+      justify-content: space-between;                 
+  }
+  body {
+    font-family: "quicksand", "sans-serif";
+  }
+ 
+  nav{margin:0px;}
