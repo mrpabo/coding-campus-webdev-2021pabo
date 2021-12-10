@@ -1,0 +1,34 @@
+.destination {
+  display: flex;
+  background-color: cornsilk;
+  color: rgb(68, 68, 68);
+  border-radius: 6px;
+  overflow: hidden;
+  height: 280px;
+}
+.destination img {
+  object-fit: cover;
+  width: 300px;
+  height: 280px;
+}
+.destination .card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 24px;
+}
+.destination .card-content h2 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+.destination .card-content .cardtext {
+  overflow: hidden;
+}
+.destination .card-content .cardtext p {
+  margin: 0;
+}
+.destination .card-content a {
+  color: rgb(22, 211, 228);
+  text-decoration: none;
+  text-align: right;
+}

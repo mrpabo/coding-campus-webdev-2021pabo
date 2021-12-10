@@ -1,0 +1,118 @@
+/* HEADER */
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+header a {
+    color: rgb(255, 251, 0);
+}
+
+header nav a:hover {
+    color: rgb(255, 251, 0);
+    background-color: rgb(41, 111, 240);
+}
+
+#page-logo a {
+    color: rgb(245, 243, 160);
+}
+
+/* HERO */
+
+#hero {
+  height: 800px;
+  background-image: url("../images/places/oceans.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+#hero-content {
+  width: 900px;
+  background-color: rgba(51, 47, 47, 0.705);
+  text-align: center;
+  padding: 50px 0;
+  margin: 0 auto;
+  position: relative;
+  top: 200px;
+}
+
+#hero-content h1 {
+    color: white;
+    text-transform: uppercase;
+    font-size: 50px;
+    font-family: "Raleway", sans-serif;
+    margin: 0;
+}
+
+#hero-content p{
+    color: white;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 300;
+    margin-bottom: 32px;
+}
+
+#hero-content a {
+    text-decoration: none;
+    background-color: rgb(255, 251, 0);
+    padding: 12px 24px;
+    color: black;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 8px;
+    box-shadow: 2px 4px 8px rgb(68, 67, 67);
+  }
+  
+  #hero-content a:hover {
+    background-color: rgb(255, 238, 0);
+  }
+
+  #highlights{
+    background: linear-gradient(180deg, rgb(202, 243, 240), rgb(253, 253, 255));
+    padding: 24px;
+  }
+
+  #highlights h2 {
+      text-transform: uppercase;
+      text-align: center;
+      font-size: 40px;
+      color: rgb(59,65,64);
+      margin: 24px 0;
+  }
+
+  #places{
+      display: flex;
+      justify-content: center;
+      width: 90%;
+      margin-bottom: 40px;
+      margin: auto;
+  }
+
+  .destination{
+      margin: 0 20px;
+      text-transform: uppercase;
+      width: 25%;
+  }
+
+  .destination p{
+      text-align: center;
+      font-size: 24px;
+      color: rgb(124,123,123);
+      margin: 20px 0;
+  }
+
+  .destination img{
+      height: 200px;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 2px 4px 20px rgb(15, 15, 15);
+  }
+
+  .destination strong{
+      color: rgb(3, 0, 160);
+  }
+

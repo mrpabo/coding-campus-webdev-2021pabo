@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="/Bobs Surf Shop/node_modules/@fortawesome/fontawesome-free/css/all.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/Bobs Surf Shop/css/styles.css" />
+    <link rel="stylesheet" href="/Bobs Surf Shop/css/main.css" />
+    <title>home</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="nav-bar">
+        <div class="mobile-menu">
+          <button class="bss-button-mobile" onclick="openDrawer()">
+            <i class="fas fa-bars fa-2x"></i>
+          </button>
+        </div>
+
+        <div class="logo-container">
+          <label class="logo-title-container">Bobs Surf Shop</label>
+          <div class="color-top"></div>
+          <div class="color-middle"></div>
+          <div class="color-bottom"></div>
+        </div>
+        <div class="search-container">
+          <label class="search-icon"><i class="fas fa-search"></i></label>
+          <input
+            id="search"
+            class="search"
+            type="search"
+            placeholder="Find a surf board"
+          />
+        </div>
+        <nav class="nav-web">
+          <ul class="nav-list">
+            <li class="nav-list-item">
+              <a class="bss-anchor" href="./home.html">Home</a>
+            </li>
+            <li class="nav-list-item">
+              <a class="bss-anchor" href="/Bobs Surf Shop/html/index.html">Shop</a>
+            </li>
+            <li class="nav-list-item">
+              <a class="bss-anchor" href="./about">About</a>
+            </li>
+            <li class="nav-list-item">
+              <a class="bss-anchor" href="./contact">Contact</a>
+            </li>
+            <li class="nav-list-item">
+              <a class="bss-anchor" href="./login.html">Login</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div id="navbarDrawer" class="navbar-drawer">
+        <div class="mobile-menu">
+          <button class="bss-button-mobile" onclick="closeDrawer()">
+            <i class="fas fa-window-close fa-2x"></i>
+          </button>
+        </div>
+
+        <div class="search-container-mobile">
+          <label class="search-icon"><i class="fas fa-search"></i></label>
+          <input
+            id="search"
+            class="search"
+            type="search"
+            placeholder="Find a surf board"
+          />
+        </div>
+        <nav class="nav-mobile">
+          <ul class="nav-list-mobile">
+            <li class="nav-list-item">
+              <a class="bss-anchor" href="./home.html">Home</a>
+            </li>
+            <li class="nav-list-item">
+              <a class="bss-anchor" href="./shop">Shop</a>
+            </li>
+            <li class="nav-list-item">
+              <a class="bss-anchor" href="./about">About</a>
+            </li>
+            <li class="nav-list-item">
+              <a class="bss-anchor" href="./contact">Contact</a>
+            </li>
+            <li class="nav-list-item">
+              <a class="bss-anchor" href="./login.html">Login</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <section>
+      <div>
+        <img
+          style="max-width: 100%"
+          src="/Bobs Surf Shop/images/surfboard-logo.jpg"
+        />
+      </div>
+    </section>
+  </body>
+</html>
+
+<script>
+  function openDrawer() {
+    document.getElementById("navbarDrawer").style.display = "block";
+  }
+  function closeDrawer() {
+    document.getElementById("navbarDrawer").style.display = "none";
+  }
+</script>

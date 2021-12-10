@@ -1,0 +1,344 @@
+.container1 {background-color: black;
+  font-size: 50px;
+  border: 5px solid rgb(182, 11, 11);
+  font-family: "Gwendolyn", Arial, sans-serif;
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  grid-template-areas:
+    "d19 d19 d19 d19 d23 d4 d2 d2 d2"
+    "d19 d19 d19 d19 d23 d4 d12 d12 d12"
+    "d9 d9 d16 d16 d16 d16 d16 d18 d18"
+    "d8 d8 d16 d16 d16 d16 d16 d18 d18"
+    "d7 d7 d7 d22 d22 d10 d10 d10 d10"
+    "d7 d7 d7 d22 d22 d17 d17 d17 d17"
+    "d6 d6 d6 d6 d6 d15 d15 d3 d1"
+    "d24 d24 d24 d24 d24 d15 d15 d3 d1"
+    "d11 d21 d13 d14 d14 d5 d5 d5 d5"
+    "d11 d21 d13 d14 d14 d20 d20 d20 d20";
+  text-shadow: rgb(241, 245, 245) 2px 2px 5px;
+}
+.day-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(./images/Advent1.jpg);
+  background-size: cover;
+  background-position: center;
+  grid-area: d1;
+  font-size: 70px;
+  text-align: center;
+  border: solid black 3px;
+  border-radius: 10px;
+}
+.day-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(./images/Advent2.jpg);
+  background-size: cover;
+  background-position: center;
+  grid-area: d2;
+  text-align: center;
+  border: solid black 3px;
+  border-radius: 10px;
+}
+.day-3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(./images/Advent3.jpg);
+  background-size: cover;
+  background-position: center;
+  grid-area: d3;
+  font-size: 40px;
+  text-align: center;
+  border: solid black 3px;
+  border-radius: 10px;
+}
+.day-4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(./images/Advent4.jpg);
+  background-size: cover;
+  background-position: center;
+  grid-area: d4;
+  font-size: 60px;
+  text-align: center;
+  background-color: rgb(206, 34, 34);
+  border: solid black 3px;
+  border-radius: 10px;
+}
+.day-5 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(./images/Advent5.jpg);
+  background-size: cover;
+  background-position: center;
+  grid-area: d5;
+  font-size: 50px;
+  text-align: center;
+  background-color: rgb(224, 97, 46);
+  border: solid black 3px;
+  border-radius: 10px;
+}
+.day-6 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(./images/Advent6.jpg);
+  background-size: cover;
+  background-position: center;
+  grid-area: d6;
+  text-align: center;
+  background-color: rgb(13, 13, 53);
+  border: solid black 3px;
+  border-radius: 10px;
+}
+.day-7 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(./images/Advent7.jpg);
+  background-size: cover;
+  background-position: center;
+  grid-area: d7;
+  font-size: 70px;
+  text-align: center;
+  background-color: aqua;
+  border: solid black 3px;
+  border-radius: 10px;
+}
+.day-8 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(./images/Advent8.jpg);
+  background-size: cover;
+  background-position: center;
+  grid-area: d8;
+  text-align: center;
+  background-color: rgb(55, 66, 66);
+  border: solid black 3px;
+  border-radius: 10px;
+}
+.day-9 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(./images/Advent9.jpg);
+  background-size: cover;
+  background-position: center;
+  grid-area: d9;
+  font-size: 40px;
+  text-align: center;
+  background-color: rgb(41, 26, 110);
+  border: solid black 3px;
+  border-radius: 10px;
+}
+.day-10 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(./images/Advent10.jpg);
+  background-size: cover;
+  background-position: center;
+  grid-area: d10;
+  font-size: 60px;
+  text-align: center;
+  background-color: rgb(206, 34, 34);
+  border: solid black 3px;
+  border-radius: 10px;
+}
+.day-11 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(./images/Advent11.jpg);
+  background-size: cover;
+  background-position: center;
+  grid-area: d11;
+  font-size: 50px;
+  text-align: center;
+  background-color: rgb(224, 97, 46);
+  border: solid black 3px;
+  border-radius: 10px;
+}
+.day-12 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(./images/Advent12.jpg);
+  background-size: cover;
+  background-position: center;
+  grid-area: d12;
+  text-align: center;
+  background-color: rgb(48, 190, 48);
+  border: solid black 3px;
+  border-radius: 10px;
+}
+.day-13 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(./images/Advent13.jpg);
+  background-size: cover;
+  background-position: center;
+  grid-area: d13;
+  font-size: 70px;
+  text-align: center;
+  background-color: aqua;
+  border: solid black 3px;
+  border-radius: 10px;
+}
+.day-14 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(./images/Advent14.jpg);
+  background-size: cover;
+  background-position: center;
+  grid-area: d14;
+  text-align: center;
+  background-color: rgb(141, 41, 91);
+  border: solid black 3px;
+  border-radius: 10px;
+}
+.day-15 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(./images/Advent15.jpg);
+  background-size: cover;
+  background-position: center;
+  grid-area: d15;
+  font-size: 40px;
+  text-align: center;
+  background-color: rgb(32, 9, 9);
+  border: solid black 3px;
+  border-radius: 10px;
+}
+.day-16 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(./images/Advent16.jpg);
+  background-size: cover;
+  background-position: center;
+  grid-area: d16;
+  font-size: 60px;
+  text-align: center;
+  background-color: rgb(206, 34, 34);
+  border: solid black 3px;
+  border-radius: 10px;
+}
+.day-17 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(./images/Advent17.jpg);
+  background-size: cover;
+  background-position: center;
+  grid-area: d17;
+  font-size: 50px;
+  text-align: center;
+  background-color: rgb(224, 97, 46);
+  border: solid black 3px;
+  border-radius: 10px;
+}
+.day-18 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(./images/Advent18.jpg);
+  background-size: cover;
+  background-position: center;
+  grid-area: d18;
+  text-align: center;
+  background-color: rgb(48, 190, 48);
+  border: solid black 3px;
+  border-radius: 10px;
+}
+.day-19 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(./images/Advent19.jpg);
+  background-size: cover;
+  background-position: center;
+  grid-area: d19;
+  font-size: 40px;
+  text-align: center;
+  background-color: aqua;
+  border: solid black 3px;
+  border-radius: 10px;
+}
+.day-20 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(./images/Advent20.jpg);
+  background-size: cover;
+  background-position: center;
+  grid-area: d20;
+  text-align: center;
+  background-color: rgb(55, 66, 66);
+  border: solid black 3px;
+  border-radius: 10px;
+}
+.day-21 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(./images/Advent21.jpg);
+  background-size: cover;
+  background-position: center;
+  grid-area: d21;
+  font-size: 40px;
+  text-align: center;
+  background-color: rgb(41, 26, 110);
+  border: solid black 3px;
+  border-radius: 10px;
+}
+.day-22 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(./images/Advent22.jpg);
+  background-size: cover;
+  background-position: center;
+  grid-area: d22;
+  font-size: 30px;
+  text-align: center;
+  background-color: rgb(206, 34, 34);
+  border: solid black 3px;
+  border-radius: 10px;
+}
+.day-23 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(./images/Advent23.jpg);
+  background-size: cover;
+  background-position: center;
+  grid-area: d23;
+  text-align: center;
+  background-color: rgb(224, 97, 46);
+  border: solid black 3px;
+  border-radius: 10px;
+}
+.day-24 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(./images/Advent24.jpg);
+  background-size: cover;
+  background-position: center;
+  grid-area: d24;
+  font-size: 70px;
+  text-align: center;
+  background-color: rgb(48, 190, 48);
+  border: solid black 3px;
+  border-radius: 10px;}

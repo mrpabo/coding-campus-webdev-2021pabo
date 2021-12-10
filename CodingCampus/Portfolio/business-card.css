@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
+
+.business-card {
+	display: grid;
+	overflow: hidden;
+	position: relative;
+	line-height: 1.6;
+	font-size: 4.5vmin;
+	width: 100vmin;
+	height: 60vmin;
+	padding: 7vmin;
+	border-radius: 10px;
+	box-shadow: 0 5px 50px 5px rgba(7, 7, 7, 0.4);
+}
+
+.content {
+	z-index: 2;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr 1fr 1fr;
+	font-family: 'Raleway', sans-serif;
+	color:rgb(10, 10, 10)
+}
+
+
+.name {
+	font-size: 2em;
+	font-weight: 700;
+	line-height: 1;
+}
+
+.profession {
+	color:rgb(9, 10, 10);
+	text-transform: uppercase;
+	font-size: 1em;
+	font-weight: 700;
+}
+
+
+.website {
+	color: rgb(10, 10, 10);
+	font-weight: 400;
+}
+
+.location {
+	white-space: nowrap;
+	text-align: right;
+	color: rgb(20, 21, 22);
+	text-transform: uppercase;
+	font-size: 0.9em;
+}
+
+
+
+html {
+	height: 100%;
+}
+
+body {
+	background: #767ef7;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	margin: 0;
+}
+

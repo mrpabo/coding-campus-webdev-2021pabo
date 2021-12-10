@@ -1,0 +1,33 @@
+body {
+  background-color: rgb(77, 77, 77);
+  color: rgb(68, 68, 68);
+}
+
+/* HEADER */
+
+header a {
+  color: rgb(183, 230, 235);
+}
+
+header nav a:hover {
+  color: rgb(59, 59, 59);
+  background-color: rgb(183, 230, 235);
+}
+
+/* MAIN */
+
+main .destionations {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 1200px;
+  margin: 3rem auto;
+  gap: 20px;
+}
+
+@media only screen and (min-with: 768px) {
+  .destinations .destination:nth-of-type(3),
+  .destinations .destination:nth-of-type(8) {
+    background-color: brown;
+    grid-column: 1 / 3;
+  }
+}
