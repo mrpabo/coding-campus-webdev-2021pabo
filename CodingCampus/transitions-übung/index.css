@@ -1,0 +1,33 @@
+.container {
+  background-color: rgb(191, 191, 235);
+  height: 500px;
+  width: 500px;
+}
+
+.box {
+  border-style: solid;
+  border-radius: 50%;
+  border-width: 1px;
+  display: block;
+  width: 100px;
+  height: 100px;
+  background-color: #111114;
+}
+
+.container:hover .box {
+  animation: moving-box 2s ease-in forwards;
+}
+@keyframes moving-box {
+  0% {
+    transform: translateX(0px) translateY(0px) rotate(180deg);
+  }
+  25% {
+    transform: translateY(400px) translateX(200px) rotate(-180deg);
+  }
+  50% {
+    transform: translateX(400px) translateY(0px) rotate(180deg);
+  }
+  100% {
+    transform: translateY(0px) translateY(0px) rotate(-180deg);
+  }
+}
