@@ -4,6 +4,12 @@ let firstName;
 let lastName;
 let keinWert;
 
+
+
+
+
+
+
 //Wertzuweisung oder Variableninitalisierung
 firstName = "'Patric";
 lastName = "'Boso";
@@ -11,6 +17,12 @@ lastName = "'Boso";
 console.log(firstName);
 console.log(lastName);
 console.log(keinWert);
+
+
+
+
+
+
 
 //Konstanten
 const MAX = 5000;
@@ -23,6 +35,16 @@ console.log(maxAge);
 
 maxAge = 75;
 console.log(maxAge);
+
+
+
+
+
+
+
+
+
+
 
 
 //Datentypen in JavaScript
@@ -41,6 +63,14 @@ console.log(yorAge + myAge)
 
 
 
+
+
+
+
+
+
+
+
 //Strings
 
 let firstName = "Max";
@@ -55,6 +85,15 @@ let isAdmion = false;
 
 console.log(typeof isLoggedIn);
 
+
+
+
+
+
+
+
+
+
 //Arryas
 
 let shopingCartItem1 = "Lautsprecher";
@@ -68,6 +107,16 @@ let shoppingCard = ["Lautsprecher", "Plattenspieler", "CD,"];
 let highscores = [1234, 1222, 1190];
 
 console.log(shoppingCard);
+
+
+
+
+
+
+
+
+
+
 
 //Objekte
 
@@ -84,7 +133,21 @@ let person = {
 console.log(person.age);
 
 
+
+
+
+
+
+
+
+
+
+
+
 //Operatoren inJS
+
+
+
 
 //Arithmics Operators
 
@@ -109,6 +172,13 @@ x--;
 
 console.log(x);
 
+
+
+
+
+
+
+
 //Assigment Operators
 
 x = 5;
@@ -122,6 +192,12 @@ x *= 2;
 x %= 10;
 
 console.log(x);
+
+
+
+
+
+
 
 
 //String Concentation
@@ -138,6 +214,13 @@ let massage = b + leerzeichen + c + leerzeichen + a;
 console.log(massage);
 
 
+
+
+
+
+
+
+
 //Logical Operators
 
 let isLoggedIn = true;
@@ -148,6 +231,11 @@ let isLoggedInOrAdmin = isLoggedIn || isAdmin;
 
 
 console.log(isLoggedInOrAdmin);
+
+
+
+
+
 
 
 
@@ -163,7 +251,19 @@ console.log(a <= b)//true
 console.log((a < b) && (a + b)) //15
 
 
+
+
+
+
+
+
+
+
+
 //Kontrollstrukturen in JS
+
+
+
 
 //If Statement
 
@@ -190,6 +290,15 @@ function numberCheck(number) {
   }
 }
 
+
+
+
+
+
+
+
+
+
 //Switch Statement
 
 let character = "a";
@@ -207,6 +316,13 @@ switch (character) {
   default:
     console.log("weder a,b noch c");
 }
+
+
+
+
+
+
+
 
 
 
@@ -237,7 +353,13 @@ function orderMyLogic(val) {
   }
 }
 
-*/
+
+
+
+
+
+
+
 
 //Exercise8
 
@@ -259,5 +381,296 @@ function testElseIf(num) {
   }
 }
 
-/*
- */
+
+
+
+
+
+
+
+//Bspl. Gerdae Zahlen bis 100 pdf
+
+//Bspl. Text umgekehrt ausgeben pdf
+
+//Bspl. Fibonacci bis 100 pdf
+
+
+
+
+
+
+
+
+
+
+//Exercise 9 (13.Jänner 22) debugger;
+
+
+function findTheRightSize(num) {
+  if (num < 5) {
+    return "tiny";
+  } else if (num < 10) {
+    return "Small";
+  } else if (num < 15) {
+    return "MEdium";
+  } else if (num < 20) {
+    return "LARge";
+  } else {
+    return "HUGE";
+  }
+}
+
+const size = findTheRightSize(22);
+
+
+console.log(size);
+console.log("Die Größe ist: " + size);
+
+
+
+
+
+
+
+
+
+//Exercise 10 Lösung 1
+
+
+function showValueForStatusCode(statusCode) {
+  switch (statusCode) {
+    case 1:
+      alert("Alpha");
+      break;
+    case 2:
+      alert("Beta");
+      break;
+    case 3:
+      alert("Gamma");
+      break;
+    case 4:
+      alert("Delta");
+      break;
+
+    default:
+      alert("Der Statuscode ist: Unbekannter Wert");
+      break;
+  }
+}
+showValueForStatusCode(1);
+
+
+
+
+//Exercise 10 Lösung 2
+
+
+function showValueForStatusCode(statusCode) {
+  switch (statusCode) {
+    case 1:
+      statucCodeValue = "Alpha";
+      break;
+    case 2:
+      statucCodeValue = "Beta";
+      break;
+    case 3:
+      statucCodeValue = "Gamma";
+      break;
+    case 4:
+      statucCodeValue = "Delta";
+      break;
+    default:
+      statucCodeValue = "Unbekannter Wert";
+      break;
+   }  
+  console.log("Der Wert für den StatusCode lautet: " + statucCodeValue);
+}    
+showValueForStatusCode(3);
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Exercise 11 Lösung 1
+
+function isNumberEvenOrOdd(number) {
+  if (number % 2 == 0) {
+    return 'Even';
+  }
+  return 'Odd';
+}
+
+console.log(isNumberEvenOrOdd(4));
+
+
+
+//Exercise 11 Lösung 2
+
+function isNumberEvenOrOdd(number) {
+  if (number % 2 == 0) {
+    return "Even";
+  }
+  return "Odd";
+}
+
+const userInput = prompt("Bitte geben Sie eine Zahl ein.");
+console.log(isNumberEvenOrOdd(userInput));
+
+
+
+
+
+
+
+
+
+
+
+//Exercise 12
+
+function boolToWorld(bool) {
+  
+  if (bool == true) {
+    return 'Yes';
+  }
+  return 'No';
+}
+
+const yesOrNo = boolToWorld(false);
+alert(yesOrNo);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Exercise 13
+
+function multiplyWithIndex(baseNumber) {
+  const startIndex = 2;
+  const endIndex = 16;
+
+  for (let i = startIndex; i <= endIndex; i += 2) {
+    const result = baseNumber * i;
+    //console.log(`${baseNumber} multipliziert mit ${i} = ${baseNumber * i}`);
+    console.log(baseNumber + "multipliziert mit " + i + " = " + result + ".");
+  }
+}
+
+multiplyWithIndex(2);
+
+
+
+
+
+//Ecercise 14 (20.Jänner 22)
+//wenn es regnet Schirm --> true
+//wenn cloudy UND chance > 20% --> true
+//wenn sunny und chance > 50% --> true
+//wenn sunny und chance < 50% --> false
+//alles andere false
+
+function takeUmbrella(weather, chance) {
+  if (weather == "rainy") {
+    return "Ja Logisch";
+  } else if (weather == "cloudy" && chance > 0.2) {
+    return "Ja";
+  } else if (weather == "sunny" && chance > 0.5) {
+    return "Ja, sicher ist sicher";
+  } else {
+    return "Nein";
+  }
+}
+
+console.log("Regenschirm mitnehmen? " + takeUmbrella("sunny", 0.7));
+
+
+
+//Exercise 14 kurze Lösung
+
+function takeUmbrella(weather, chance) {
+  if (weather == "rainy") return true;
+  if (weather == "cloudy" && chance > 0.2) return true;
+  if (weather == "sunny" && chance > 0.5) return true;
+  return false
+}
+
+console.log("Regenschirm mitnehmen? " + takeUmbrella("sunny", 0.9));
+
+
+
+//Exercise 15
+
+//wenn XY dann....
+//wenn XY2 dann....
+//Ansonsten.....
+
+function rps(p1, p2) {
+  let result;
+
+  if (p1 == p2) {
+    result = "draw";
+  } else if (p1 == "rock" && p2 == "scissors") {
+    result = "Player 1 won!";
+  } else if (p1 == "scissors" && p2 == "paper") {
+    result = "Player 1 won!";
+  } else if (p1 == "paper" && p2 == "rock") {
+    result = "Player 1 won!";
+  } else {
+    result = "Player 2 won!";
+  }
+
+  console.log(result);
+}
+
+rps("rock", "paper");
+
+
+
+
+//Exercise 16
+
+
+//number = Anzahl Zeile
+//todo: Zeile ausgeben
+//1.Zeile 1 / 2.Zeile 1 2 / 3.Zeile 1 2 3
+
+
+function printPattern(range) {
+  for (let i = 1; i <= range; i++) {
+    let str = "";
+    for (let j = 1; j <= i; j++) {
+      str += j + " ";
+    }
+    console.log(str);
+  }
+}
+printPattern(10);
+
+
+
+
+
+
+
+
+*/
+
+
+
