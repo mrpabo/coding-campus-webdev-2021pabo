@@ -1,15 +1,8 @@
-//alert("würfel")
-//Seiten:6 - Klick = würfeln - Farben: Blau,Gelb - Anzeige:als Zahl + Würfel"rollen" + letzte 10 Ergebnise
-//Konzept: Start Button  - Ergebnisfeld - letzte Ergebnise
-//todo: oneClick-Event auf Button/startet Würfel/zufällige Zahl 1-6/Wiederholen 10x/letzte Zahl ausgeben und ins Array speichern/Array ausgeben(fixe Länge 10)
-//Nr1 einfach, Nr2 sleep
-/*
- */
-
 let history = [];
 
-function rollTheDice() {
-  const randomNumber = getRandomDiceNumber();
+async function rollTheDice() {
+    const randomNumber = getRandomDiceNumber();
+    await showRollingAnimation();
   showDiceNumber(randomNumber);
   refreshAndShowHistory(randomNumber);
 }
@@ -31,7 +24,17 @@ function showDiceNumber(number) {
  * @param {*} number
  */
 function refreshAndShowHistory(number) {
-    history = history.slice(0, 10);
-  document.getElementById("history").innerHTML = history
+  history = history.slice(0, 10);
+  document.getElementById("history").innerHTML = history;
   history.unshift(number);
+}
+
+async function showRollingAnimation() {
+  for (let i = 0; i <= 9; i++) {
+    showDiceNumber(getRandomDiceNumber());
+    await sleep(i * 50);
+  }
+}
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
 }
