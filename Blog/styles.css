@@ -1,0 +1,42 @@
+body {
+  background-color: rgb(127, 156, 211);
+  font-family: Arial, Helvetica, sans-serif;
+  max-width: 800px;
+  margin: auto;
+  border: black 3px;
+}
+label {
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 4px 4px 10px rgb(13, 13, 194);
+  border: 1px solid #ccc;
+}
+button {
+  font: inherit;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: rgb(13, 13, 194);
+  border: 1px solid #ccc;
+  color: white;
+  cursor: pointer;
+  margin-top: 10px;
+}
+hr {
+  margin: 50px 10px;
+}
+.card {
+  background-color: rgb(119, 151, 241);
+  border: solid rgb(3, 16, 136);
+  border-radius: 10px;
+  box-shadow: 4px 4px 10px rgb(13, 13, 194);
+}
+p {
+  word-break: break-all;
+}

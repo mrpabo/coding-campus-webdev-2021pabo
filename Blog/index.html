@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+   
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog</title>
+     <script src="app.js" defer></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>Post hinzufügen</h1>
+    <form>
+        <label for="post-title">Titel:</label>
+        <input type="text" name="post-title" id="post-title">
+        
+        <label for="post-text">Text:<span id="character-amount">0</span>/140 <label>
+            <textarea name="post-text" id="post-text" cols="30" rows="3" maxlength="140"
+             placeholder="Tippe hier deinen Text ein......."></textarea>
+              <label for="post-link">Link</label>
+        <input type="text" name="post-link" id="post-link">
+        <button id="submit-button">Post erstellen</button>
+        </form>
+        <hr>
+        <h1>Blog</h1>
+        <div id="postfeed">
+           
+
+        </div>
+  </body>
+</html>

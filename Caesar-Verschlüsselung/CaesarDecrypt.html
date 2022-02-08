@@ -1,5 +1,8 @@
 <html>
   <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Caesar Encrypt / Decrypt</title>
     <script src="CaesarDecrypt.js"></script>
     <link rel="stylesheet" href="CaesarVerschlüsselung.css" />
@@ -13,7 +16,7 @@
   </head>
   <body>
     <h1>Caesar Encrypt / Decrypt</h1>
-    <textarea cols="120" rows="25" id="text-input"></textarea>
+    <textarea cols="100" rows="25" id="text-input"></textarea>
     <br />
     <label for="key">Key</label>
     <select name="key" id="key">
@@ -27,15 +30,15 @@
       class="encrypt-button"
       type="button"
       value="Encrypt"
-      onclick="caesar()"
+      onclick="caesar(true)"
     />
     <input
       class="decrypt-button"
       type="button"
       value="Decrypt"
-      onclick="caesar()"
+      onclick="caesar(false)"
     />
     <br />
-    <textarea cols="120" rows="25" id="text-output" readonly></textarea>
+    <textarea cols="100" rows="25" id="text-output" readonly></textarea>
   </body>
 </html>
