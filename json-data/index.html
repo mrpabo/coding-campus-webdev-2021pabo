@@ -4,12 +4,35 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Employee Managment</title>
-    <script src="app.js" defer></script>
+    <title>Employee Management</title>
+    <script src="app.js"></script>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body onload="startApp()">
-    <h1>Employee Managment</h1>
-    <div id="list"></div>
+    <h1>Employee Management</h1>
+    <div class="content">
+      <div id="list"></div>
+      <div id="detail">
+        <h2 id="name"></h2>
+        <img id="avatar" src="placeholder.gif" />
+        <div id="key"></div>
+        <div id="birthday"></div>
+      </div>
+    </div>
+    <div class="add">
+      <form action="http://localhost:3000/employees">
+        <label for="firstName">Firstname</label>
+        <input type="text" name="firstName"/>
+        <label for="lastName">Lastname</label>
+        <input type="text" name="lastName"/>
+        <label for="birthday">Birthday</label>
+        <input type="number" name="birthday"/>
+        <label for="key">Key</label>
+        <input type="text" name="key"/>
+        
+
+
+      </form>
+    </div>
   </body>
 </html>
