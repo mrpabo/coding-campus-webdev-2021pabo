@@ -41,7 +41,7 @@ function getBrandName(product) {
   getBrandName(chips);
 }
 console.log(chips.weight);
-*/
+
 //-----------------------------------------------------------------
 
 const patric = {
@@ -67,6 +67,23 @@ const nameElement = displayName(patric);
 document.body.appendChild(nameElement);
 
 //-----------------------------------------------------------------
+*/
+
+//25.02.22
+
+const person = {
+  firstName: "Andy",
+  lastName: "Müller",
+  company: "Müller Milch",
+  cars: ["VW", "Mini", "Audi"],
+  contact: true,
+  massage: "Hello das ist Andy Müller",
+};
+
+displayProfile(person):htmlElement{
 
 
 
+
+  return
+}

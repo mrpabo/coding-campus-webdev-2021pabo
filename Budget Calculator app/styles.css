@@ -1,0 +1,12 @@
+.invalid-input {
+    border: 2px solid red;
+    border-radius: 3px;
+}
+
+.positive-balance {
+    color: green;
+}
+
+.negative-balance {
+    color: red;
+}
