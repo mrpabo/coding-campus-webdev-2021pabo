@@ -71,24 +71,32 @@ document.body.appendChild(nameElement);
 
 //25.02.22
 
-const person = {
-  firstName: "Andy",
-  lastName: "Müller",
-  company: "Müller Milch",
-  cars: ["VW", "Mini", "Audi"],
-  contact: true,
-  massage: "Hello das ist Andy Müller",
-};
+import person from "./ModelLoading.js";
 
+function displayName({
+  first,
+  last,
+  twitter,
+  company,
+  cars,
+  phoneNumber,
+  isPossibleToContact,
+}) {
+  const nameTag = document.createElement("h4");
+  const twitterTag = document.createElement("h5");
+  const companyTag = document.createElement("h5");
+  const phoneNumberTag = document.createElement("p");
+  const profileContainer = document.createElement("div");
 
+  nameTag.innerText = `${first} ${last}`;
+  twitterTag.innerText = `${twitter}`;
+  companyTag.innerText = `${company}`;
+  phoneNumberTag.innerText = `${phoneNumber}`;
+  return [nameTag, twitterTag, companyTag, phoneNumberTag];
+}
+const body = document.getElementsByName("body");
+const profileElements = displayName(person);
 
-
-
-//function displayProfile(person): htmlElement{
-  // const nameTag = document.createElement("h1");
-
-
-
-
-  //return
-//}
+for (const element of profileElements) {
+  document.body.appendChild(element);
+}

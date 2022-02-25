@@ -1,0 +1,4 @@
+#eingaben{
+    display: flex;
+    flex-direction: column;
+}
