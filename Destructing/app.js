@@ -52,7 +52,7 @@ const patric = {
   size: "1,76cm",
 };
 
-//console.log(Object.values(patric));
+console.log(Object.values(patric));
 
 function displayName(patric) {
   const nameTag = document.createElement("h1");
@@ -80,10 +80,15 @@ const person = {
   massage: "Hello das ist Andy Müller",
 };
 
-displayProfile(person):htmlElement{
 
 
 
 
-  return
-}
+//function displayProfile(person): htmlElement{
+  // const nameTag = document.createElement("h1");
+
+
+
+
+  //return
+//}
