@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Employee Management</title>
     <script src="app.js"></script>
+    <script src="confetti.js"></script>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body onload="startApp()">
@@ -13,25 +14,31 @@
     <div class="content">
       <div id="list"></div>
       <div id="detail">
+        <input id="delete" type="button" value="Delete" />
         <h2 id="name"></h2>
         <img id="avatar" src="placeholder.gif" />
         <div id="key"></div>
         <div id="birthday"></div>
+        <div id="age"></div>
       </div>
     </div>
+    <h2>New Employee</h2>
     <div class="add">
-      <form action="http://localhost:3000/employees">
+      <form>
         <label for="firstName">Firstname</label>
-        <input type="text" name="firstName"/>
+        <input type="text" name="firstName" id="firstNameInput" />
         <label for="lastName">Lastname</label>
-        <input type="text" name="lastName"/>
-        <label for="birthday">Birthday</label>
-        <input type="number" name="birthday"/>
+        <input type="text" name="lastName" id="lastNameInput" />
         <label for="key">Key</label>
-        <input type="text" name="key"/>
-        
-
-
+        <input type="text" name="key" id="keyInput" />
+        <label for="dateOfBirth">Date of Birth</label>
+        <input type="date" name="dateOfBirth" id="dateOfBirthInput" />
+        <input
+          type="button"
+          id="button"
+          value="Save Employee"
+          onclick="createEmployee();confetti(50);"
+        />
       </form>
     </div>
   </body>

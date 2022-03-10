@@ -1,19 +1,59 @@
+body {
+  background-color: rgb(208, 209, 245);
+}
+
 .list-item {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    border: 1px solid grey;
-    padding: 10px 20px;
+  display: flex;
+  gap: 150px;
+  align-items: center;
+  border: 3px solid black;
+  border-radius: 5px;
+  padding: 13px 50px;
 }
 
 #avatar {
-    max-width: 150px;
+    background-color: black;
+  max-width: 350px;
+  border: solid 5px black;
+  border-radius: 20px;
+  box-shadow: 10px 5px;
 }
 
 .content {
-    display: flex;
+    background-color: rgb(160, 159, 253);
+  display: flex;
+  flex-direction: row-reverse;
+  border: 3px solid;
+  border-radius: 10px;
 }
 
 #detail {
-margin: 10px;
+  margin-right: 300px;
+}
+
+#delete {
+  background-color: rgb(23, 81, 133);
+  color: red;
+  border-radius: 10px;
+  height: 30px;
+  width: 70px;
+}
+
+.add {
+  width: 200px;
+  height: 250px;
+  margin-left: 10px;
+}
+h2 {
+    margin-top: 50px;
+  margin-left: 10px;
+}
+
+#button {
+  color: rgb(34, 170, 34);
+  background-color: rgb(23, 81, 133);
+  width: 165px;
+  height: 30px;
+  margin-top: 20px;
+  border-radius: 10px;
 }

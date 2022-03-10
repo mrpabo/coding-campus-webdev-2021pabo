@@ -9,17 +9,108 @@
     <title>Document</title>
   </head>
   <body>
+    <div class="split left">
+    <h1>Create Profile</h1>
     <div id="eingaben">
-      <form action="http://localhost:3000/employees">
-        <label for="firstName">Firstname</label>
-        <input type="text" name="firstName" />
-        <label for="lastName">Lastname</label>
-        <input type="text" name="lastName" />
-        <label for="birthday">Birthday</label>
-        <input type="number" name="birthday" />
-        <label for="key">Key</label>
-        <input type="text" name="key" />
-      </form>
+      <label for="firstName">Firstname</label>
+      <input type="text" name="firstName" id="fName" />
+      <label for="lastName">Lastname</label>
+      <input type="text" name="lastName" id="lName" />
+      <label for="email">E-Mail</label>
+      <input type="email" name="email" id="mail" />
+      <label for="profession">Profession</label>
+      <input type="text" name="profession" id="position"/>
+      <label for="contact">Can i contact this Person? <br>
+      NO      YES </label>
+      <label class="switch">
+        <input type="checkbox" />
+        <span class="slider round"></span>
+      </label>
+      <label for="passwort">Passwort</label>
+      <input type="passwort" name="passwort" id="pw" />
+      <label for="passwortRe">Passwort wiederholen</label>
+      <input type="password" name="passwortRe" id="re-pw" />
+      <label for="button"></label>
+      <input type="button" onclick="submitButton('oncklick')" name="submit">enter</button>
     </div>
+  </div>
+  <div class="split right">
+    <div id="cardContainer">
+  <script>
+  
+      const cards = [
+        {
+          firstName: "Elon", 
+          lastName: "Musk",
+          email: "@elonmusk",
+          company: "Space X",
+          profession: "CEO",
+          cars: ["tesla", "tesla"],
+          isAvailableByPhone: true,
+          textGreeting: "hello Space X is the future!",
+          followers: 100000,
+        },
+        {
+          firstName: "john",
+          lastName: "Lennon",
+          email: "@johnlennon",
+          profession: "singer",
+          company: "none",
+          cars: ["bwm", "porsche"],
+          isAvailableByPhone: true,
+          textGreeting: "let it be",
+          followers: 20000000, 
+        },
+        {
+          firstName: "Barrak",
+          lastName: "Obama",
+          email: "@barrakobama",
+          company: "none",
+          profession: "Us President",
+          cars: ["hummer", "corvette"],
+          isAvailableByPhone: true,
+          textGreeting: "hello everyone",
+          followers: 20004545,
+        },
+        {
+          firstName: "Michael",
+          lastName: "Jordan",
+          email: "@mj",
+          company: "retired",
+          profession: "Professional Basketball Player",
+          cars: ["hummer", "corvette"],
+          isAvailableByPhone: true,
+          textGreeting: "be like mike",
+          followers: 40000000,
+        },
+        {
+          firstName: "tom",
+          lastName: "brady",
+          email: "@tombrady",
+          company: "Space X",
+          profession: "retired",
+          cars: ["hummer", "corvette"],
+          isAvailableByPhone: true,
+          textGreeting: "my favorite championship is the next one",
+          followers: 70000000,
+        },
+        {
+          firstName: "Tom",
+          lastName: "Cruz",
+          email: "@tomcruz",
+          company: "none",
+          profession: "actor",
+          cars: ["hummer", "corvette"],
+          isAvailableByPhone: false,
+          textGreeting: "i feel the need... the need for speed",
+          followers: 70000000,
+        },
+      ];
+     </script>
+     </div>
+    </div>
+  </div>
+  </div>
+ 
   </body>
 </html>

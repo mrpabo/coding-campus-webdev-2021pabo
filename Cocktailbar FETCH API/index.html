@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="app.js" defer></script>
+    
+    <link rel="stylesheet" href="style.css" />
+    <title>🍹 Cocktail-Bar</title>
+  </head>
+  <body>
+    <h1>🍹 Cocktail-Bar</h1>
+    <div id="drink-filter">
+      <select name="filter-alcoholic" id="filter-alcoholic">
+        <option value="Alcoholic">Alcoholic</option>
+        <option value="Non_Alcoholic">Non-Alcoholic</option>
+      </select>
+      <input type="button" value="Filtern" id="filter-button" />
+    </div>
+    <div class="content">
+      <div id="drink-list"></div>
+      <div id="drink-detail" style="display: none">
+        <h2 id="drink-name">Cocktail-Name</h2>
+        <div>
+          <span id="drink-category" class="badge">CATEGORY</span>
+          <span id="drink-alcoholic" class="badge">ALCOHOLIC</span>
+        </div>
+        <img id="drink-image" src="https://www.thecocktaildb.com/images/media/drink/vrwquq1478252802.jpg/preview" alt="" />
+        <h3>Ingredients</h3>
+        <ul id="drink-ingredients">
+          <li>Ingredient1</li>
+          <li>Ingredient2</li>
+          <li>Ingredient3</li>
+          <li>Ingredient4</li>
+          <li>Ingredient5</li>
+        </ul>
+        <div>Glass: <span id="drink-glass"></span></div>
+
+        <h3>Instructions</h3>
+        <p id="drink-instructions">
+          Rub the rim of the glass with the lime slice to make the salt stick to it. Take care to moisten only the outer rim and sprinkle the salt on it. The salt should present to the lips of the imbiber and never mix into the cocktail. Shake the other ingredients with ice, then carefully pour into
+          the glass.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
