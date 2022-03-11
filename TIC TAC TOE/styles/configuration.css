@@ -1,0 +1,34 @@
+#game-configuration {
+  text-align: center;
+  width: 70%;
+  margin: 3rem auto;
+}
+
+#game-configuration ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+#game-configuration li {
+  width: 50%;
+  margin: 1rem;
+  padding: 1rem;
+  background-color: rgb(243, 227, 255);
+  border-radius: 4px;
+  box-shadow: 1px 4px rgb(0, 0, 0, 0.2);
+}
+#game-configuration h2 {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+}
+
+#game-configuration h3 {
+  font-size: 1.5rem;
+  color: rgb(94, 4, 168);
+}
+
+.player-symbol{
+    font-size: 3rem;
+}

@@ -30,3 +30,4 @@ cards.forEach((card) => {
 function submitButton('click', submitButton) {
     document.getElementById('click')
 }
+
