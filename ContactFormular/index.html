@@ -4,113 +4,53 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="./app.js" defer></script>
-    <link rel="stylesheet" href="styles.css" />
     <title>Document</title>
   </head>
   <body>
-    <div class="split left">
-    <h1>Create Profile</h1>
-    <div id="eingaben">
-      <label for="firstName">Firstname</label>
-      <input type="text" name="firstName" id="fName" />
-      <label for="lastName">Lastname</label>
-      <input type="text" name="lastName" id="lName" />
-      <label for="email">E-Mail</label>
-      <input type="email" name="email" id="mail" />
-      <label for="profession">Profession</label>
-      <input type="text" name="profession" id="position"/>
-      <label for="contact">Can i contact this Person? <br>
-      NO      YES </label>
-      <label class="switch">
-        <input type="checkbox" />
-        <span class="slider round"></span>
-      </label>
-      <label for="passwort">Passwort</label>
-      <input type="passwort" name="passwort" id="pw" />
-      <label for="passwortRe">Passwort wiederholen</label>
-      <input type="password" name="passwortRe" id="re-pw" />
-      <label for="button"></label>
-      <input type="button" onclick="submitButton('oncklick')" name="submit">enter</button>
-    </div>
-  </div>
-  <div class="split right">
-    <div id="cardContainer">
-  <script>
-  
-      const cards = [
-        {
-          firstName: "Elon", 
-          lastName: "Musk",
-          email: "@elonmusk",
-          company: "Space X",
-          profession: "CEO",
-          cars: ["tesla", "tesla"],
-          isAvailableByPhone: true,
-          textGreeting: "hello Space X is the future!",
-          followers: 100000,
-        },
-        {
-          firstName: "john",
-          lastName: "Lennon",
-          email: "@johnlennon",
-          profession: "singer",
-          company: "none",
-          cars: ["bwm", "porsche"],
-          isAvailableByPhone: true,
-          textGreeting: "let it be",
-          followers: 20000000, 
-        },
-        {
-          firstName: "Barrak",
-          lastName: "Obama",
-          email: "@barrakobama",
-          company: "none",
-          profession: "Us President",
-          cars: ["hummer", "corvette"],
-          isAvailableByPhone: true,
-          textGreeting: "hello everyone",
-          followers: 20004545,
-        },
-        {
-          firstName: "Michael",
-          lastName: "Jordan",
-          email: "@mj",
-          company: "retired",
-          profession: "Professional Basketball Player",
-          cars: ["hummer", "corvette"],
-          isAvailableByPhone: true,
-          textGreeting: "be like mike",
-          followers: 40000000,
-        },
-        {
-          firstName: "tom",
-          lastName: "brady",
-          email: "@tombrady",
-          company: "Space X",
-          profession: "retired",
-          cars: ["hummer", "corvette"],
-          isAvailableByPhone: true,
-          textGreeting: "my favorite championship is the next one",
-          followers: 70000000,
-        },
-        {
-          firstName: "Tom",
-          lastName: "Cruz",
-          email: "@tomcruz",
-          company: "none",
-          profession: "actor",
-          cars: ["hummer", "corvette"],
-          isAvailableByPhone: false,
-          textGreeting: "i feel the need... the need for speed",
-          followers: 70000000,
-        },
-      ];
-     </script>
-     </div>
-    </div>
-  </div>
-  </div>
- 
+    <div id="card-output"></div>
+    <button onclick="fetchCards()">klick</button>
+    <script>
+        /*
+      const cardOutput = document.getElementById("card-output");
+      async function fetchCards() {
+        const res = await fetch("http://localhost:8081/getprofiles");
+        const data = await res.json();
+        return data.data;
+        displayCards(data);
+      }
+      const value = fetchCards();
+      function displayCards(value) {
+        value.forEach((card) => {
+          const cardContainer = document.createElement("div");
+          cardContainer.innerHTML = `<div>${card.firstName} ${card.lastName}</div>
+            <div>email: ${card.email}</div>
+            <div>company: ${card.company}</div>`;
+          cardOutput.appendChild(cardContainer);
+        });
+      }*/
+const employeeCard = document.getElementById('card-output');
+      function fetchCards() {
+    fetch ("http://localhost:8081/getprofiles")
+ .then(response => response.json())
+ .then(data => displayCard(data));
+}
+function displayCard(datas){
+datas["data"].forEach(card => {
+    const cardContainer = document.createElement("div");
+    cardContainer.className = "card-container";
+    cardContainer.innerHTML=`
+    <div> <b>Name:</b> ${card.firstName} ${card.lastName}</div>
+    <div> <b>Email:</b> ${card.email}</div>
+    <div> <b>Company:</b> ${card.company}</div>
+    <div> <b>Profession:</b> ${card.profession}</div>
+    <div> <b>Cars:</b> ${card.cars}</div>
+    <div> <b>Greetings:</b> ${card.textGreeting}</div>
+    <div> <b>Followers:</b> ${card.followers}</div>
+    <div> ${card.firstName} ${card.lastName} is ${!card.isAvailableByPhone ? "<b>not</b>" : ""} <b>available</b> by phone.</div>
+`;
+    employeeCard.appendChild(cardContainer);
+});
+}
+    </script>
   </body>
 </html>
