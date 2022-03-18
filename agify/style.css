@@ -1,0 +1,33 @@
+body{
+    display: flex;
+    flex-direction: column;
+    border: solid 2px black;
+    width: 300px;
+    height: 300px;
+    align-items: center;
+    justify-content: center;
+    
+    
+}
+
+#nameInput{
+     width: 150px;
+    height: 25px;
+    margin-bottom: 50px;
+}
+#getAge{
+    background-color: aqua;
+    width: 150px;
+    height: 25px;
+    
+}
+
+#country{
+     width: 150px;
+    height: 25px;
+    margin-bottom: 50px;
+}
+#ageContainer{
+    font-size: large;
+    margin-top: 10px;
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>agify</title>
+    <script src="app.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <label for="firstName">Name</label>
+    <input type="text" id="firstName"/>
+    <label for="country">Country</label>
+    <select id="country">
+      <option value="AT">Österreich</option>
+      <option value="DE">Deutschland</option>
+      <option value="CH">Schweiz</option>
+      <option value="AR">Argentinien</option>
+      <option value="CO">Columbien</option>
+    </select>
+    <input type="button" id="getAge" value="get my age" onclick="getAge()" />
+    <div id="ageContainer"></div>
+  </body>
+</html>
