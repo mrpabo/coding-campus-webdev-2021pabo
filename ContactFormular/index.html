@@ -7,6 +7,8 @@
     <title>Document</title>
   </head>
   <body>
+    
+
     <div id="card-output"></div>
     <button onclick="fetchCards()">klick</button>
     <script>
@@ -51,6 +53,35 @@ datas["data"].forEach(card => {
     employeeCard.appendChild(cardContainer);
 });
 }
+
+
+//Dans Lösung
+
+     async function fetchCards() {
+        // the fetch call return a response called res
+        const res = await fetch("http://localhost:8081/getprofiles");
+        // the res value is then formatted with re.json method. 
+        //we then await for the output and save it in a destructured object.
+        const { data } = await res.json();
+        // check to see what the data value give? an array of cards!
+        console.log(data);
+        // take the data and loop over it. 
+        data.forEach((card) => {
+          // in every iteration build out a nice pretty html profile card. I hope your is prettier than mine.
+        const cardContainer = document.createElement("div");
+        cardContainer.innerHTML = `
+        <div>${card.firstName} ${card.lastName}</div>
+        <div>email: ${card.email}</div>
+        <div>company: ${card.email}</div>
+        <div>profession: ${card.profession}</div>
+
+        `;
+        // add the card to the body
+        document.body.append(cardContainer);
+      });
+    }
+      // dont forget to call the function!
+      fetchCards()
     </script>
   </body>
 </html>

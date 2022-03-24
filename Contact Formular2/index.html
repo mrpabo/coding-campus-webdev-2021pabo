@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>can</title>
+  </head>
+  <body>
+    <div>
+      <form id="form" action="/" method="GET">
+        <div>
+          <label for="firstname">First Name</label>
+          <input id="firstName" name="firstname" type="text" required />
+        </div>
+        <div>
+          <label for="lastName">LastName</label>
+          <input id="lastName" name="lastName" type="text" required />
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input id="email" name="email" type="text" required />
+        </div>
+        <div>
+          <label for="company">Company</label>
+          <input id="company" name="company" type="text" required />
+        </div>
+        <div>
+          <label for="available">Contact By Phone?</label>
+          <input id="isAvailable" name="available" type="checkbox" />
+        </div>
+        <div>
+          <label for="Telephone">Telephone</label>
+          <input id="teleNumber" name="Telephone" type="tel" />
+        </div>
+        <div>
+          <label for="textGreeting">What is your favorite greeting</label>
+          <input id="textGreeting" name="textGreeting" type="text" required />
+        </div>
+        <div>
+          <label for="followers">Followers</label>
+          <input id="followers" name="followers" type="text" required />
+        </div>
+        <div>
+          <label for="company">Password</label>
+          <input id="password" name="password" type="password" required />
+        </div>
+        <div>
+          <label for="reenterPW">Re-enter Password</label>
+          <input id="reenterPW" name="reenterPW" type="password" required />
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+      <div id="error"></div>
+    </div>
+    <div id="profiles"></div>
+    <script>
+      const firstName = document.getElementById("firstName");
+      const lastName = document.getElementById("lastName");
+      const email = document.getElementById("email");
+      const company = document.getElementById("company");
+      const password = document.getElementById("password");
+      const reenterPW = document.getElementById("reenterPW");
+      const form = document.getElementById("form");
+      const errorElement = document.getElementById("error");
+      const isAvailable = document.getElementById("isAvailable");
+      const textGreeting = document.getElementById("textGreeting");
+      const profileContainer = document.getElementById("profiles");
+      const stng = "hello world";
+      const result = stng.match("hey world");
+      form.addEventListener("submit", (e) => {
+        const regExLetters = /^[A-Za-z]+$/;
+        const regExNumbers = /^[0-9]+$/;
+        let messages = [];
+        if (firstName.value === "" || firstName.value == null) {
+          messages.push("Name is required");
+        }
+        if (!firstName.value.match(regExLetters)) {
+          messages.push("invalid name");
+        }
+        if (lastName.value === "" || lastName.value == null) {
+          messages.push("Name is required");
+        }
+        if (!lastName.value.match(regExLetters)) {
+          messages.push("invalid name");
+        }
+        if (!email.value.includes("@")) {
+          messages.push("invalid email");
+        }
+        if (!password.value.length >= 6) {
+          messages.push("Password must be longer than 6 characters");
+        }
+        if (password.value.length > 20) {
+          messages.push("Password must be less than 20 characters");
+        }
+        if (!password.value === reenterPW.value) {
+          messages.push("Passwords are not Identical");
+        }
+        if (messages.length > 0) {
+          e.preventDefault();
+          errorElement.innerText = messages.join(", ");
+        }
+        const dto = {
+          firstName: firstName.value,
+          lastName: lastName.value,
+          email: email.value,
+          company: company.value,
+          profession: company.value,
+          cars: [],
+          isAvailable: isAvailable.value,
+          textGreeting: textGreeting.value,
+          followers: followers.value,
+        };
+        addCards(dto);
+        fetchCards();
+      });
+      async function addCards(dto) {
+        try {
+          const res = await fetch("http://localhost:8081/addprofile", {
+            method: "POST",
+            body: JSON.stringify(dto),
+            headers: {
+              Accept: "application/json",
+              "Content-Type": "application/json",
+              "Access-Control-Allow-Origin": "*",
+            },
+          });
+          const data = await res.json();
+          console.log(data);
+        } catch (err) {
+          console.log(err);
+        }
+      }
+      async function fetchCards() {
+        // fetch call return a response called res
+        const res = await fetch("http://localhost:8081/getprofiles");
+        // res value is then formatted with re.json method.
+        //we then await for the output and save it in destructured object.
+        const { data } = await res.json();
+        // check to see what the data value give? and array of cards!
+        console.log(data);
+        // take the data and loop over it.
+        data.forEach((card) => {
+          // in every iteration build out a nice pretty html profile card. I hope your is prettier than mine.
+          const cardContainer = document.createElement("div");
+          cardContainer.innerHTML = `
+        <div>${card.firstName} ${card.lastName}</div>
+        <div>email: ${card.email}</div>
+        <div>company: ${card.company}</div>
+        <div>profession: ${card.profession}</div>
+        <div>cars: ${}<div>
+        <div>isAvailable: ${card.isAvailable}<div>
+        <div>textGreeting: ${card.textGreeting}<div>
+        <div>follower: ${card.followers}<div>
+        `;
+          // add the card to the body
+          profileContainer.append(cardContainer);
+        });
+      }
+      // dont forget to call the function!
+      fetchCards();
+    </script>
+  </body>
+</html>
