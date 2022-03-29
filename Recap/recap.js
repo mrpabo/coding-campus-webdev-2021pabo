@@ -24,7 +24,7 @@ const emptyVariable = undefined;
   var global = "exists globally";
   const localImmutable = "constant value(not chancable)";
   //localImmuatble = 'ohne';
-  let localMuatble = "chaneable value";
+  let localMuatble = "chanceable value";
 }
 console.log(global); // wird global angelegt
 //console.log(localImmutable);

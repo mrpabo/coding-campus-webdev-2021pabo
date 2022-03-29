@@ -1,0 +1,39 @@
+:root {
+  /* color pallette */
+  --white: #fcfcfc;
+  --yellow: #ffbe36;
+  --orange: #ff740f;
+  --red: #e50058;
+  --blue: rgb(35, 171, 250);
+  --grey:rgb(218, 212, 212);
+  /* Typography */
+  --text: 26px;
+  --bigText: 80px;
+  --mainTitle: 60px;
+  --subTitle: 45px;
+  --subTitle2: 24px;
+}
+
+
+body {
+  background-color: var(--blue);
+  font-family: "Dancing Script";
+  font-size: var(--text);
+  text-align: center;
+  border: var(--yellow) 5px solid;
+  border-radius: 20px;
+  max-width: 20rem;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+#temperatur {
+  font-size: var(--bigText);
+  border: var(--yellow) solid 2px;
+  background-color: var(--grey);
+  border-radius: 100%;
+  
+}
+
+

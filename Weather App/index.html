@@ -1,0 +1,77 @@
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <script src="index.js" defer></script>
+    <link rel="stylesheet" href="main.css" />
+     <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Fira+Sans:ital,wght@0,400;0,800;1,400&family=Gwendolyn:wght@700&family=Lato:ital,wght@1,300;1,700;1,900&family=Oleo+Script:wght@700&family=Open+Sans:ital,wght@0,300;0,400;0,700;0,800;1,300;1,400&family=Quicksand:wght@300;500&family=Raleway:wght@700&family=Roboto:wght@900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <form id="searching">
+      <label for="suche">Standort:</label>
+      <input
+        type="search"
+        id="suche"
+        placeholder="Suche..."
+        onclick="openModal()"
+      />
+    </form>
+    <div id="show-data"></div>
+      <h1 id="city">Feldkirch</h1>
+      <h2 id="country">Austria</h2>
+      <div>
+          
+          <span id="date" name="date">Monday 13.März 2021 </span>
+        </div>
+      
+        <div>
+          <p>Temperatur</p>
+          <span id="temperatur"> 17°</span>
+        </div>
+      <div>
+        <p>Wind Status</p>
+        <span id="wind-status"> KPH</span>
+      </div>
+      <div>
+        <p>Visibility</p>
+        <span id="visibility"> KM</span>
+      </div>
+      <div>
+        <p>Humidity</p>
+        <span id="humidity"> %</span>
+      </div>
+      <div>
+        <p>Air pressure</p>
+        <span id="air-pressure"> hPa</span>
+      </div>
+    </div>
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+       
+      </div>
+    </div>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
