@@ -1,8 +1,5 @@
-// function--> modal + backdrop ein
-
 function openPlayerConfig(event) {
   editedPlayer = +event.target.dataset.playerid;
-  console.log(editedPlayer);
   playerConfigOverlayElement.style.display = "block";
   backdropElement.style.display = "block";
 }
@@ -15,14 +12,12 @@ function closePlayerConfig() {
 function savePlayerConfig(event) {
   event.preventDefault();
   const formData = new FormData(event.target);
-  enteredPlayerName = formData.get("playername");
+  const enteredPlayername = formData.get("playername");
 
-  const updatedPlayerNameElement = document.getElementById(
-    "player-" + editedPlayer + "-name"
-  );
-  updatedPlayerNameElement.textContent = enteredPlayerName;
-  players[editedPlayer - 1].name = enteredPlayerName;
+  const updatedPlayerNameElement = document.getElementById("player-" + editedPlayer +"-name");
+  updatedPlayerNameElement.textContent = enteredPlayername;
 
-  console.log(players);
+  players[editedPlayer - 1].name = enteredPlayername;
+
   closePlayerConfig();
 }
