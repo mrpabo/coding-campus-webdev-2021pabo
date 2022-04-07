@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./main.css" />
+    <script src="./index.js"></script>
+    <title>Weather Widget</title>
+  </head>
+  <body>
+    <div id="widget" class="widget">
+      <div class="nav-bar">
+        <div id="refreshIcon" class="new-city-icon">
+          <label id="toggler" class="drawer-button" for="drawer-01"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 48 48"
+              width="48px"
+              height="48px"
+            >
+              <path
+                fill="#616161"
+                d="M34.6 28.1H38.6V45.1H34.6z"
+                transform="rotate(-45.001 36.586 36.587)"
+              />
+              <path
+                fill="#616161"
+                d="M20 4A16 16 0 1 0 20 36A16 16 0 1 0 20 4Z"
+              />
+              <path
+                fill="#37474F"
+                d="M36.2 32.1H40.2V44.400000000000006H36.2z"
+                transform="rotate(-45.001 38.24 38.24)"
+              />
+              <path
+                fill="#64B5F6"
+                d="M20 7A13 13 0 1 0 20 33A13 13 0 1 0 20 7Z"
+              />
+              <path
+                fill="#BBDEFB"
+                d="M26.9,14.2c-1.7-2-4.2-3.2-6.9-3.2s-5.2,1.2-6.9,3.2c-0.4,0.4-0.3,1.1,0.1,1.4c0.4,0.4,1.1,0.3,1.4-0.1C16,13.9,17.9,13,20,13s4,0.9,5.4,2.5c0.2,0.2,0.5,0.4,0.8,0.4c0.2,0,0.5-0.1,0.6-0.2C27.2,15.3,27.2,14.6,26.9,14.2z"
+              />
+            </svg>
+          </label>
+        </div>
+      </div>
+
+      <div class="head">
+        <div id="date" class="date">Wednesday, March 23 2022</div>
+        <div id="city" class="city-title"></div>
+        <div id="country" class="country-title">USA</div>
+      </div>
+
+      <div class="container-details">
+        <div class="circle-container">
+          <div class="temp">
+            <div id="temp">55</div>
+            <div class="symbol">°</div>
+          </div>
+        </div>
+      </div>
+      <div class="additional-info">
+        <div class="additional-info-box">
+          <div class="extra-info-title">zur Zeit</div>
+          <div id="status" class="status">Cloudy</div>
+        </div>
+        <div class="additional-info-box">
+          <div class="extra-info-title">Hoch-/Tiefdruck</div>
+          <div id="highAndLow" class="highs-and-lows">55/ 78</div>
+        </div>
+
+        <div class="additional-info-box">
+          <div class="extra-info-title">Windstärke KmH</div>
+          <div class="extra-info-wrapper">
+            <div id="wind" class="text-color"></div>
+            <div class="text-color"></div>
+          </div>
+        </div>
+        <div class="additional-info-box">
+          <div class="extra-info-title">Sichtweite Km</div>
+          <div>
+            <div id="visibility" class="text-color"></div>
+            <div class="text-color"></div>
+          </div>
+        </div>
+
+        <div class="additional-info-box">
+          <div class="extra-info-title">Luftfeuchtigkeit %</div>
+          <div>
+            <div id="humidity" class="text-color"></div>
+            <div class="text-color"></div>
+          </div>
+        </div>
+        <div class="additional-info-box">
+          <div class="extra-info-title">Luftdruck hPa</div>
+          <div>
+            <div id="pressure"  class="text-color"></div>
+            <div class="text-color"></div>
+          </div>
+        </div>
+      </div>
+
+      <div id="drawer" class="drawer-container">
+        <input id="drawer-01" class="drawer-toggler" type="checkbox" hidden />
+        <div class="drawer">
+          <div class="wrapper">
+            <label class="drawer-button" for="drawer-01">X</label>
+            <form>
+              <input id="locationInput" type="text" placeholder="add your location" required />
+              <input type="button" value="Go" onclick="getLatLong(getInputValue())"/>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

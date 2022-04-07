@@ -19,12 +19,12 @@ body {
   background-color: var(--blue);
   font-family: "Dancing Script";
   font-size: var(--text);
-  text-align: center;
   border: var(--yellow) 5px solid;
   border-radius: 20px;
   max-width: 20rem;
   justify-content: center;
   align-items: center;
+  text-align: center;
   
 }
 
