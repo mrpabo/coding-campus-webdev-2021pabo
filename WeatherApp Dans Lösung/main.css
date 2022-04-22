@@ -3,7 +3,7 @@
   --white: #fcfcfc;
   --yellow: #ffbe36;
   --orange: #ff740f;
-  --red: #e50058;
+  --red: #9d315b;
   --grey: #898184;
   /* Typography */
   --text: 26px;
@@ -22,6 +22,7 @@
 }
 body {
   display: flex;
+  text-align: center;
   justify-content: center;
   align-items: center;
   margin: 0 0 0 0;
@@ -94,11 +95,12 @@ body {
   display: flex;
   justify-items:center;
   align-items: center;
+  text-align: center;
   background-color: var(--red);
   border-radius: 50%;
-  padding: 10px;
-  width: 180px;
-  height: 180px;
+  padding: 50px;
+  width: 250px;
+  height: 200px;
 }
 
 .additional-info {
@@ -129,7 +131,10 @@ body {
   width:40vw;
 }
 
-.drawer-button {color: blue; cursor: pointer;}
+.drawer-button {color: blue;
+   cursor: pointer;
+   padding-left: 80%;
+  }
 
 .drawer {
   position: fixed;
@@ -141,7 +146,7 @@ body {
   color: white;
   opacity: 0;
   transform: translateY(100%);
-  transition: 0.5s ease;
+  transition: 3.0s ease;
 }
 
 .drawer-toggler:checked+.drawer {
