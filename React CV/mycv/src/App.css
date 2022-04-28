@@ -1,0 +1,21 @@
+#dark-side {
+  background-color: rgb(30, 28, 28);
+  color: white;
+  text-align: left;
+  width: 250px;
+  
+}
+#bright-side {
+  background-color: rgb(244, 240, 240);
+  color: rgb(52, 49, 49);
+  text-align: left;
+  width: 600px;
+}
+#dark-bright {
+  display: flex;
+}
+
+
+#bild{
+  align-items: center;
+}
