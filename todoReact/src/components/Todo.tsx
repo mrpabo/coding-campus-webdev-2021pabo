@@ -1,4 +1,4 @@
-import { ChangeEvent, useState } from "react";
+import { ChangeEvent, FormEvent, useState } from "react";
 import TodoItem from "../models/TodoItem";
 
 interface TodoProps extends TodoItem {
@@ -30,13 +30,14 @@ export default function Todo(props: TodoProps) {
   function handleOnClickCancel(event: React.MouseEvent<HTMLButtonElement>) {
     setEditing(false);
   }
-  function handleOnClickSave(event: React.MouseEvent<HTMLButtonElement>) {
+  function handleOnSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
     props.editTask(props.id, newName);
     setEditing(false);
   }
 
   const editingTemplate = (
-    <form className="stack-small">
+    <form className="stack-small" onSubmit={handleOnSubmit}>
       <div className="form-group">
         <label className="todo-label" htmlFor={props.id}>
           New name for {props.name}
@@ -57,11 +58,7 @@ export default function Todo(props: TodoProps) {
           Cancel
           <span className="visually-hidden">renaming {props.name}</span>
         </button>
-        <button
-          type="submit"
-          className="btn btn__primary todo-edit"
-          onClick={handleOnClickSave}
-        >
+        <button type="submit" className="btn btn__primary todo-edit">
           Save
           <span className="visually-hidden">new name for {props.name}</span>
         </button>

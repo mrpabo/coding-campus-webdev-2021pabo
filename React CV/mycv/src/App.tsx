@@ -1,12 +1,13 @@
 import "./App.css";
 import LogoBild from "./components/LogoBild";
+import { LocationIcon } from "./components/LocationIcon";
 
 
 function DarknBright() {
   return (
     <div id="dark-bright">
       <div id="dark-side">
-        <LogoBild/>
+        <LogoBild />
         <p>
           <b>ABOUT ME</b> <br />
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni error
@@ -52,6 +53,8 @@ function DarknBright() {
           <br />
           GRAPHIC DESINGER
         </p>
+        
+        <p><LocationIcon />12548 10th AveWhitestone,NY</p>
       </div>
     </div>
   );
