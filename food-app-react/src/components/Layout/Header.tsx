@@ -5,6 +5,7 @@ import HeaderCartButton from "./HeaderCartButton";
 import { Meal } from "../../App";
 
 interface HeaderProps {
+  onShowCart: ()=>void;
   cart: Meal[];
 }
 
@@ -13,11 +14,11 @@ export default function Header(props: HeaderProps) {
     <Fragment>
       <header className="header">
         <h1>Food-Order</h1>
-        <HeaderCartButton cart={props.cart}  />
+        <HeaderCartButton onShowCart={props.onShowCart} cart={props.cart} />
       </header>
       <div className="main-image">
         <img src="header.jpg" />
       </div>
     </Fragment>
   );
-};
+}
