@@ -1,5 +1,5 @@
 import { ReactNode, useReducer } from "react";
-import CartContext, { CartContextState, CartItem } from "./Cartcontext";
+import CartContext, {CartContextState, CartItem} from "./CartContext";
 
 interface CartProviderProps{
     children: ReactNode;
@@ -15,7 +15,7 @@ const defaultCartState: CartState ={
     totalPrice: 0
 }
 
-function cartReducer(state: CartState, action: {type: string, item?: CartItem, id?:string}):CartState{
+function cartReducer(state: CartState, action: {type: string, item?: CartItem, id?: string}): CartState{
     //state -> aktuelle Snapshot von unserem Warenkorb
     //action -> welche aktion wir ausführen möchten (ADD, REMOVE) + daten (obj)
 
@@ -32,7 +32,7 @@ function cartReducer(state: CartState, action: {type: string, item?: CartItem, i
                 
         if(existingItem){
 
-            let updatedItem = {
+            let updatedItem: CartItem = {
                 ...existingItem,
                 quantity: existingItem.quantity + newItemToAdd.quantity
             }
@@ -45,29 +45,40 @@ function cartReducer(state: CartState, action: {type: string, item?: CartItem, i
             updatedItems = state.items.concat(newItemToAdd);
         }
 
-        //totalamount berechnen
-        const updatedTotalPrice = state.totalPrice + newItemToAdd.price * newItemToAdd.quantity;    
+        //total price berechnen
+        const updatedTotalPrice = state.totalPrice + newItemToAdd.price * newItemToAdd.quantity;
        
         //neuer state mit daten zurückgeben
         return {
             items: updatedItems,
             totalPrice: updatedTotalPrice
         }
-    
     }
 
-    if (action.type === 'REMOVE' && action.id) {
+    if(action.type === 'REMOVE' && action.id){
         const itemToRemoveIndex = state.items.findIndex(
-            (item: CartItem) => item.id === action.id
-                
+            (item) => item.id === action.id
         );
         const itemToRemove = state.items[itemToRemoveIndex];
 
         let updatedItem: CartItem = {
             ...itemToRemove,
-            quantity:itemToRemove.quantity
+            quantity: itemToRemove.quantity--
         }
-        //item löschen
+
+        const updatedItems = [...state.items];
+        if(updatedItem.quantity === 0){
+            updatedItems.splice(itemToRemoveIndex, 1);
+        } else {
+            updatedItems[itemToRemoveIndex] = updatedItem;
+        }
+
+        const updatedTotalPrice = state.totalPrice - itemToRemove.price;
+
+        return {
+            items: updatedItems,
+            totalPrice: updatedTotalPrice
+        }
     }
 
     return defaultCartState; //TODO: neue aktualisierte state
@@ -80,17 +91,15 @@ export default function CartProvider(props: CartProviderProps){
         dispatchCartAction({type: 'ADD', item: item})
     }
 
-    function removeItemFromCarthandler(id: string){
-        //TODO
-        //dispatchCartAction({type: 'REMOVE', id: id})
-
+    function removeItemFromCartHandler(id: string){
+        dispatchCartAction({type: 'REMOVE', id: id})
     }
 
-    const cartContext: CartContextState= {
+    const cartContext: CartContextState = {
         items: cartState.items,
         totalPrice: cartState.totalPrice,
         addItem: addItemToCartHandler,
-        removeItem: removeItemFromCarthandler,
+        removeItem: removeItemFromCartHandler,
     }
 
     return (

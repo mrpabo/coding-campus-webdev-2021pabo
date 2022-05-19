@@ -1,13 +1,13 @@
 import React from "react";
 
-export interface CartItem{
+export interface CartItem {
     id: string;
     name: string;
     quantity: number;
     price: number;
 }
 
-export interface CartContextState{
+export interface CartContextState {
     items: CartItem[];
     totalPrice: number;
     addItem: (item: CartItem)=>void,

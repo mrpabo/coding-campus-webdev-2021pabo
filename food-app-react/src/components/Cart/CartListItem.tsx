@@ -1,20 +1,20 @@
 // import { CartItem } from '../../store/cart-context';
-import { CartItem } from '../../store/Cartcontext';
-import './CartListItem.css';
+import { CartItem } from "../../store/CartContext";
+import "./CartListItem.css";
 
-interface CartListItemProps{
-    price: number;
-    name: string;
-    quantity: number;
-    onRemove: ()=>void;
-    onAdd: ()=>void;
+interface CartListItemProps {
+  price: number;
+  name: string;
+  quantity: number;
+  onRemove: () => void;
+  onAdd: () => void;
 }
 
-export default function CartListItem (props: CartListItemProps) {
+export default function CartListItem(props: CartListItemProps) {
   const price = `€ ${props.price.toFixed(2)}`;
 
   return (
-    <li className='cart-item'>
+    <li className="cart-item">
       <div>
         <h2>{props.name}</h2>
         <div className="summary">
@@ -28,4 +28,4 @@ export default function CartListItem (props: CartListItemProps) {
       </div>
     </li>
   );
-};
+}

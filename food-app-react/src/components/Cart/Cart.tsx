@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import CartContext, { CartItem } from '../../store/Cartcontext';
+import CartContext, { CartItem } from '../../store/CartContext';
 import Modal from '../UI/Modal';
 import './Cart.css';
 import CartListItem from './CartListItem';
@@ -13,7 +13,7 @@ export default function Cart(props: CartProps){
   const hasItems = cartCtx.items.length > 0;
 
   function cartItemRemoveHandler(id: string){
-    //TODO
+    cartCtx.removeItem(id);
   }
 
   function cartItemAddHandler(item: CartItem){
