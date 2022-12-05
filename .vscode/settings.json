@@ -1,4 +1,5 @@
 {
     "editor.bracketPairColorization.enabled": true,
-    "editor.scrollbar.verticalScrollbarSize": 5
+    "editor.scrollbar.verticalScrollbarSize": 5,
+    "liveServer.settings.port": 5501
 }
